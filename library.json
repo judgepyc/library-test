@@ -1,0 +1,572 @@
+{
+  "name": "library",
+  "version": "1",
+  "items": [
+    {
+      "type": "folder",
+      "name": "books",
+      "filename": "books",
+      "seq": 2,
+      "examples": [],
+      "root": {
+        "request": {
+          "auth": {
+            "mode": "inherit"
+          }
+        },
+        "meta": {
+          "name": "books",
+          "seq": 2
+        }
+      },
+      "items": [
+        {
+          "type": "http",
+          "name": "another_user_books",
+          "filename": "another_user_books.bru",
+          "seq": 7,
+          "settings": {
+            "encodeUrl": true,
+            "timeout": 0
+          },
+          "tags": [],
+          "examples": [],
+          "request": {
+            "url": "{{api-host}}/users/2/books",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "books_index",
+          "filename": "books_index.bru",
+          "seq": 1,
+          "settings": {
+            "encodeUrl": true,
+            "timeout": 0
+          },
+          "tags": [],
+          "examples": [],
+          "request": {
+            "url": "{{api-host}}/books",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "books_show",
+          "filename": "books_show.bru",
+          "seq": 3,
+          "settings": {
+            "encodeUrl": true,
+            "timeout": 0
+          },
+          "tags": [],
+          "examples": [],
+          "request": {
+            "url": "{{api-host}}/books/1",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "books_store",
+          "filename": "books_store.bru",
+          "seq": 2,
+          "settings": {
+            "encodeUrl": true,
+            "timeout": 0
+          },
+          "tags": [],
+          "examples": [],
+          "request": {
+            "url": "{{api-host}}/books",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"title\": \"test\",\n  \"book_text\": \"test\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": [
+                {
+                  "type": "text",
+                  "name": "title",
+                  "value": "тест с создание книги через txt файл",
+                  "enabled": true
+                },
+                {
+                  "type": "file",
+                  "name": "file",
+                  "value": [
+                    "C:\\Users\\user\\Desktop\\файл с текстом.txt"
+                  ],
+                  "enabled": true
+                }
+              ],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "books_update",
+          "filename": "books_update.bru",
+          "seq": 4,
+          "settings": {
+            "encodeUrl": true,
+            "timeout": 0
+          },
+          "tags": [],
+          "examples": [],
+          "request": {
+            "url": "{{api-host}}/books/1",
+            "method": "PUT",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"title\": \"не тест\",\n  \"book_text\": \"не тест\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "book_delete",
+          "filename": "book_delete.bru",
+          "seq": 5,
+          "settings": {
+            "encodeUrl": true,
+            "timeout": 0
+          },
+          "tags": [],
+          "examples": [],
+          "request": {
+            "url": "{{api-host}}/books/2",
+            "method": "DELETE",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "book_restore",
+          "filename": "book_restore.bru",
+          "seq": 6,
+          "settings": {
+            "encodeUrl": true,
+            "timeout": 0
+          },
+          "tags": [],
+          "examples": [],
+          "request": {
+            "url": "{{api-host}}/books/2/restore",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "users",
+      "filename": "users",
+      "seq": 2,
+      "examples": [],
+      "root": {
+        "request": {
+          "auth": {
+            "mode": "inherit"
+          }
+        },
+        "meta": {
+          "name": "users",
+          "seq": 2
+        }
+      },
+      "items": [
+        {
+          "type": "http",
+          "name": "giveAccess",
+          "filename": "giveAccess.bru",
+          "seq": 2,
+          "settings": {
+            "encodeUrl": true,
+            "timeout": 0
+          },
+          "tags": [],
+          "examples": [],
+          "request": {
+            "url": "{{api-host}}/users/give-access",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"user_id\": 1\n}",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "login",
+          "filename": "login.bru",
+          "seq": 2,
+          "settings": {
+            "encodeUrl": true,
+            "timeout": 0
+          },
+          "tags": [],
+          "examples": [],
+          "request": {
+            "url": "{{api-host}}/login",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"login\": \"testuser2\",\n  \"password\": \"password123\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "logout",
+          "filename": "logout.bru",
+          "seq": 2,
+          "settings": {
+            "encodeUrl": true,
+            "timeout": 0
+          },
+          "tags": [],
+          "examples": [],
+          "request": {
+            "url": "{{api-host}}/logout",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "registrartion",
+          "filename": "registrartion.bru",
+          "seq": 1,
+          "settings": {
+            "encodeUrl": true,
+            "timeout": 0
+          },
+          "tags": [],
+          "examples": [],
+          "request": {
+            "url": "{{api-host}}/registration",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"login\": \"testuser\",\n  \"password\": \"password123\",\n  \"password_confirmation\": \"password123\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "users",
+          "filename": "users.bru",
+          "seq": 2,
+          "settings": {
+            "encodeUrl": true,
+            "timeout": 0
+          },
+          "tags": [],
+          "examples": [],
+          "request": {
+            "url": "{{api-host}}/users",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "google api",
+      "filename": "google api",
+      "seq": 3,
+      "examples": [],
+      "root": {
+        "request": {
+          "auth": {
+            "mode": "inherit"
+          }
+        },
+        "meta": {
+          "name": "google api",
+          "seq": 3
+        }
+      },
+      "items": [
+        {
+          "type": "http",
+          "name": "google-save",
+          "filename": "google-save.bru",
+          "seq": 2,
+          "settings": {
+            "encodeUrl": true,
+            "timeout": 0
+          },
+          "tags": [],
+          "examples": [],
+          "request": {
+            "url": "{{api-host}}/books/save-external",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"google_id\": \"AAjjRgAACAAJ\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "google-search",
+          "filename": "google-search.bru",
+          "seq": 1,
+          "settings": {
+            "encodeUrl": true,
+            "timeout": 0
+          },
+          "tags": [],
+          "examples": [],
+          "request": {
+            "url": "{{api-host}}/books-search",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"query\": \"Harry Potter\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "environments": [],
+  "root": {
+    "request": {
+      "auth": {
+        "mode": "bearer",
+        "bearer": {
+          "token": "haNTsRcr7pttfhmzNxdg3YyfHl99PNskM3QFl7vE0e9a4605"
+        }
+      },
+      "vars": {
+        "req": [
+          {
+            "name": "api-host",
+            "value": "http://127.0.0.1/api",
+            "enabled": true,
+            "local": false,
+            "uid": "RUUzQzws3uRgzgiWUHnTe"
+          }
+        ]
+      }
+    }
+  },
+  "brunoConfig": {
+    "version": "1",
+    "name": "library",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ],
+    "size": 0.003143310546875,
+    "filesCount": 18
+  },
+  "exportedAt": "2026-01-16T13:30:17.531Z",
+  "exportedUsing": "Bruno/3.0.2"
+}
