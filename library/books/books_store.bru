@@ -1,0 +1,28 @@
+meta {
+  name: books_store
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{api-host}}/books
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "title": "test",
+    "book_text": "test"
+  }
+}
+
+body:multipart-form {
+  title: тест с создание книги через txt файл
+  file: @file(C:\Users\user\Desktop\файл с текстом.txt)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

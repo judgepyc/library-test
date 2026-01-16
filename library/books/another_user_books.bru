@@ -1,0 +1,16 @@
+meta {
+  name: another_user_books
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{api-host}}/users/2/books
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

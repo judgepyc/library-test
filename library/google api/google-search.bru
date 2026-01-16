@@ -1,0 +1,22 @@
+meta {
+  name: google-search
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{api-host}}/books-search
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "query": "Harry Potter"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

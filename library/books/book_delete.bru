@@ -1,0 +1,16 @@
+meta {
+  name: book_delete
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{api-host}}/books/2
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

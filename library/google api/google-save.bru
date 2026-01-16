@@ -1,0 +1,22 @@
+meta {
+  name: google-save
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{api-host}}/books/save-external
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "google_id": "AAjjRgAACAAJ"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

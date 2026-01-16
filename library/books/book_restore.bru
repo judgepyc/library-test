@@ -1,0 +1,16 @@
+meta {
+  name: book_restore
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{api-host}}/books/2/restore
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

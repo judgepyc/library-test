@@ -1,0 +1,22 @@
+meta {
+  name: giveAccess
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{api-host}}/users/give-access
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "user_id": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
