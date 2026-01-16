@@ -1,4 +1,4 @@
-# Library API - Qualification Work
+# Library API - Test Task
 
 REST API for a mobile book library application developed on Laravel 10/11.
 
