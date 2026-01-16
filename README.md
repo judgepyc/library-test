@@ -20,7 +20,7 @@ REST API for a mobile book library application developed on Laravel 10/11.
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-link>
+   git clone <this repo link>
    cd <project-folder>
    ```
 2. **Install dependencies**
