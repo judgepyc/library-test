@@ -30,6 +30,7 @@ REST API for a mobile book library application developed on Laravel 10/11.
 3. **Environment Setup**
     ```bash
     cp .env.examle .env
+    php artisan key:generate
     ```
     Configure your DB settings in .env file
 4. **Migrations**
